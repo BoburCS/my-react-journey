@@ -1,0 +1,28 @@
+header {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 20px 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-center ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-right button {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--white);
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+February 22, 2024 React Lesson 1
+
+// real and virtual dom
+// component
+// different files
+// jsx
+// capital letter
+// className
+// specific css for each component
+// img import 
+// inline css 
+// rfce
+// event 
+// props from parent to child
