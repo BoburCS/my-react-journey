@@ -1,35 +1,14 @@
 import React from "react";
-import Container from "./Container";
+import Container from "./components/Container.jsx";
+import "./input.css";
+import "./output.css";
 
 function App() {
 	return (
-        <div>
+        <div className="mt-5">
             <Container />
         </div>
     );
 }
 
 export default App;
-
-// map the components that repeat
-
-// key is a special prop that is used by React to identify which items have changed, are added, or are removed
-// the key prop should be a unique value for each item
-// the key prop should not be used inside the component
-
-// condionals
-// ternary inside jsx
-
-// hooks
-
-
-
-// useState
-// usestate is a hook that allows you to have state variables in functional components
-// useState returns an array with two elements
-// the first element is the current value of the state variable
-// the second element is a function that allows you to update the state variable
-// the initial value of the state variable is passed to useState as an argument
-
-// class components  
-
