@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Form from "./components/Form/Form.jsx";
-function App() {
+import Button from "./components/Button/Button.jsx";
+import Accordion from "./components/Accordion/Accordion.jsx";
+import Dropdown from "./components/Dropdown/Dropdown.jsx";
+import "./App.css";
+import accordionData from "./Data/AccordionData/index.js";
+
+function App() 
+{
+    const [form, setForm] = useState(false);
+
+    const handleClick = () => setForm(previousForm => !previousForm);
 
     return (
         <>
             <Navbar />
-            <Form />
+            <div className="btn-form">
+                <Button title={"Sign In"} form={form} handleFunction={handleClick}/>
+                {form && <Form />}
+            </div>
+            <div>
+                {accordionData.map((element, index) => <Accordion key={index} {...element}/>)}
+            </div>
+            <Dropdown />
         </>
     );
 }
 
 export default App;
-
-// hook is a function that lets you “hook into” React features from function components.
-
-// useState is adds rendering to the component
-// previous state is passed to the function and the new state is returned

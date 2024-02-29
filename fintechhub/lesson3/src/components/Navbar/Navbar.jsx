@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Button from "../Button/Button.jsx";
+import "./Navbar.css";
+import users from "../../Data/UsersData/index.js";
 
-function Navbar () 
+function Navbar() 
 {
-    const [form, setForm] = useState(true);
-
-    const showForm = () => setForm(previousForm => !previousForm);
-
+    const [name, setName] = useState("Suzy");
+    const handleClick = (event) => setName(event.target.textContent);
 	return (
-        <nav className="px-[100px] py-4 bg-green-500 flex justify-between">
-            <h1>Lesson3</h1>
-            <Button content={"Log In"} handleClick={showForm} />
+        <nav className="navbar">
+            {users.map((user, index) => <Button key={index} title = {user} handleFunction = {handleClick}/> )}  
+            <h4>Name: {name}</h4>      
         </nav>
     );
 }

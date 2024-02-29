@@ -1,0 +1,27 @@
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown {
+    width: 220px;
+    padding: 8px 0;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 10px);
+}
+
+.dropdown-item {
+    padding: 6px 12px;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(230, 222, 222);
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}

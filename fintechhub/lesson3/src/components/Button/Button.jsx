@@ -1,12 +1,10 @@
 import React from "react";
+import "./Button.css";
 
-function Button ({ content, handleClick }) 
-{
-	return (
-        <>
-            <button onClick={handleClick} className="font-bold border-solid border-slate-900">{content}</button>
-        </>
-    );
+function Button({ title, form, handleFunction }) {
+	if (form) title = "Close";
+
+	return <button onClick={handleFunction}> {title} </button>;
 }
 
 export default Button;
