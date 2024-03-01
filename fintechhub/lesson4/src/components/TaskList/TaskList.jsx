@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Task from "../Task/Task.jsx";
 
 const TaskContainer = styled.div`
-    margin: auto;
     padding: 20px 0;
     width: 450px;
     display: flex;
