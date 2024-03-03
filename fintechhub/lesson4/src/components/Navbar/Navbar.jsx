@@ -1,23 +1,19 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Flex from "../Flex";
+import ColorConstants from "../Color";
 import { ButtonAddTask } from "../Button/Button.jsx";
 
-const NavbarContainer = styled.nav`
-    color: #fff;
-    padding: 20px 100px;
-    width: 100%;
-    background-color: royalblue;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+const Logo = styled.h1`
+    color: ${({color}) => color};
 `;
 
 function Navbar(props) {
 	return (
-        <NavbarContainer>
-            <div>Logo</div>
+        <Flex padding={"20px 100px"} width={"100%"} bg={ColorConstants.LightDark} align={"center"} justify={"space-between"}>
+            <Logo color={ColorConstants.White}>To Do App</Logo>
             <ButtonAddTask toggleTaskForm = {props.toggleTaskForm}/>
-        </NavbarContainer>
+        </Flex>
     );
 }
 

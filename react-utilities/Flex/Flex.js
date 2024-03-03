@@ -21,7 +21,7 @@ const StyledFlex = styled.div`
 `;
 
 function Flex(props) {
-	return <StyledFlex {...props} />;
+	return <StyledFlex {...props}/>;
 }
 
 export default Flex;

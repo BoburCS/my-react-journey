@@ -1,21 +1,21 @@
 import styled from "styled-components";
-import ColorConstants from "../Color";
+import ColorConstants from "../../utilities/Color";
 
-const BtnAddTask = styled.button`
+const MainButton = styled.button`
     color: ${ColorConstants.White};
     font-size: 16px;
     font-weight: 700;
     padding: 12px 24px;
+    min-width: 160px;
     border: none;
     border-radius: 16px;
+    outline: none;
     background-color: ${ColorConstants.Purple};
     cursor: pointer;
 `;
 
-function ButtonAddTask(props) {
-	return (
-        <BtnAddTask onClick={props.toggleTaskForm}>+Add Task</BtnAddTask>
-    );
+function Button({content, ...props}) {
+	return <MainButton {...props}>{content}</MainButton>;
 }
 
-export { ButtonAddTask };
+export default Button;

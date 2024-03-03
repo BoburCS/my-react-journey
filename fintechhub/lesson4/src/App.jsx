@@ -10,6 +10,7 @@ function App() {
 	// Tasks Related
 	const [tasks, setTasks] = useState([{title: "Go to gym", type: "To Do", date: new Date()}]);
 	const addTask = (task) => setTasks((previousTasks) => [...previousTasks, task]);
+	
 	const [addTaskForm, setAddTaskForm] = useState(false);
 	const toggleTaskForm = () => setAddTaskForm((previous) => !previous);
 

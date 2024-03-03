@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ColorConstants from "../../utilities/Color";
+import Text from "../../utilities/Text";
 
 const CardDiv = styled.div`
     color: ${ColorConstants.White};
@@ -12,8 +13,8 @@ const CardDiv = styled.div`
 function Card(props) {
 	return (
         <CardDiv>
-            <h1>{props.title}</h1>
-            <h1>{props.price}</h1>
+            <Text color={ColorConstants.White} type={"xl"} content={props.title} />
+            <Text color={ColorConstants.White} type={"l"} content={props.price} />
         </CardDiv>
     );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ColorConstants from "../components/Color";
 
 const MainLayout = styled.div`
     display: flex;
@@ -7,10 +8,18 @@ const MainLayout = styled.div`
 `;
 
 const SidebarButton = styled.button`
+    color: ${ColorConstants.White};
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border: none;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: ${ColorConstants.Purple};
+    cursor: pointer;
     position: absolute;
     top: 85%;
     left: 0;
-    transform: translateY(-85%);
 `;
 
 const ContentLayout = styled.main`

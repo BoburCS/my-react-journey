@@ -1,12 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
+import ColorConstants from "../Color";
+import { ButtonAddTask } from "../Button/Button.jsx";
 
 const Form = styled.form`
     margin: auto;
     padding: 30px;
     width: 400px;
-    border: 1px solid black;
-    border-radius: 8px;
+    min-height: 400px;
+    border-radius: 16px;
+    background-color: ${ColorConstants.LightDark};
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -23,15 +26,6 @@ const Input = styled.input`
     border-bottom: 1px solid black;
     border-radius: 4px;
     outline: none;
-`;
-
-const Button = styled.button`
-    padding: 8px 16px;
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
 `;
 
 function TaskForm({ addTask, showForm }) {
@@ -59,7 +53,7 @@ function TaskForm({ addTask, showForm }) {
             <Input onChange={handleChange} name="title" type="text" placeholder="Task Title" required/>
             <Input onChange={handleChange} name="type" type="text" placeholder="Task Type" required/>
             {error && <p>{error}</p>}
-            <Button>Add</Button>
+            <ButtonAddTask>+Add Task</ButtonAddTask>
         </Form>
      )
     );
