@@ -6,6 +6,7 @@ const MainButton = styled.button`
     font-size: 16px;
     font-weight: 700;
     padding: 12px 24px;
+    width: ${({width }) => width};
     min-width: 160px;
     border: none;
     border-radius: 16px;

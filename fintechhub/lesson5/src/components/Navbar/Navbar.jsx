@@ -6,7 +6,7 @@ import Text from "../../utilities/Text";
 import Button from "../Button/Button";
 
 function Navbar({ isOpen, setIsOpen }) {
-	
+
 	const handleClick = () => setIsOpen(!isOpen);
 
 	return (

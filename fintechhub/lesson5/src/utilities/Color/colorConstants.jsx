@@ -4,6 +4,7 @@ class ColorConstants {
     static Dark = "#020617";
     static White = "#fff";
     static Text = "#000";
+    static Grey = "#828FA3";
 }
 
 export default ColorConstants;

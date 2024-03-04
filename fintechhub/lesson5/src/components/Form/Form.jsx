@@ -3,7 +3,7 @@ import ColorConstants from "../../utilities/Color";
 
 const StyledForm = styled.form`
     padding: 30px;
-    width: 400px;
+    width: 480px;
     min-height: 320px;
     border-radius: 16px;
     background-color: ${ColorConstants.LightDark};
@@ -13,8 +13,31 @@ const StyledForm = styled.form`
     transform: translate(-50%, -50%); 
 `;
 
-function Form() {
-	return <StyledForm/>;
-}
+const StyledInput = styled.input`
+    color: ${ColorConstants.White};
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid ${ColorConstants.Grey};
+    border-radius: 8px;
+    background: transparent;
+    outline: none;
+`;
 
-export default Form;
+const StyledLabel = styled.label`
+    color: ${ColorConstants.Grey};
+    font-size: 12px;
+    font-weight: 700;
+`;
+
+const StyledSelect = styled.select`
+    color: ${ColorConstants.Text};
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    outline: none;
+`;
+
+export { StyledForm, StyledInput, StyledLabel, StyledSelect };

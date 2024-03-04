@@ -1,3 +1,3 @@
-import Form from "./Form";
+import { StyledForm, StyledInput, StyledLabel, StyledSelect } from "./Form";
 
-export default Form;
+export { StyledForm, StyledInput, StyledLabel, StyledSelect };
