@@ -8,12 +8,18 @@ import Navbar from "./components/Navbar";
 function App() {
     const [isOpen, setIsOpen] = useState(false);
 
+    const [theme, setTheme] = useState("");
+
+    const handleTheme = () => {
+        setTheme(prev => prev === "blue" ? "red" : "blue");
+    }
+
 	return (
         <>
             <Navbar isOpen={isOpen} setIsOpen={setIsOpen}/>
             <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/about" element={<About/>}/>
+                <Route path="/" element={<Home theme={theme}/>}/>
+                <Route path="/about" element={<About handleTheme={handleTheme}/>}/>
                 <Route path="/admin" element={<Admin isOpen={isOpen} setIsOpen={setIsOpen}/>}/>
             </Routes>
         </>
