@@ -6,6 +6,7 @@ const StyledFlex = styled.div`
     width: ${({width}) => width};
     background-color: ${({bg}) => bg};
     display: flex;
+    flex: ${({flex}) => flex};
     flex-direction: ${({direction}) => direction || "row"};
     align-items: ${({align}) => align || "flex-start"};
     justify-content: ${({justify}) => justify || "flex-start"};
