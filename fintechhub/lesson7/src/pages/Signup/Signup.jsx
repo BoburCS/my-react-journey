@@ -8,7 +8,8 @@ import Text from "../../utilities/Text";
 import Color from "../../utilities/Color";
 
 function Signup({ setUsers, setToken, setCurrentUser }) {
-    const navigate = useNavigate();``
+    const navigate = useNavigate();
+    
     const signupHandler = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);

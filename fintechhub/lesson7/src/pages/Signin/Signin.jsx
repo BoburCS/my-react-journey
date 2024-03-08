@@ -8,6 +8,7 @@ import Color from "../../utilities/Color";
 
 function Signin({users, setToken, setCurrentUser}) {
     const navigate = useNavigate();
+
     const signinHandler = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -19,10 +20,9 @@ function Signin({users, setToken, setCurrentUser}) {
         }
         setToken(prev => !prev);
         setCurrentUser(currentuser);
-        navigate("/");
         event.target.reset();
+        navigate("/");
     }
-
 
     return (
         <Flex w={"100%"} h={"100vh"} align={"center"} justify={"center"} gap={"150px"}>

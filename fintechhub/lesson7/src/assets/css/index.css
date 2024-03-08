@@ -12,3 +12,7 @@ body {
 a {
     text-decoration: none;
 }
+
+input:focus {
+    outline: 2px solid #316FF6;
+}

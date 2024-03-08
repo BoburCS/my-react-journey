@@ -1,23 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin/Signin";
 import Home from "./pages/Home";
-import usersData from "./data/users";
+import About from "./pages/About";
+import News from "./pages/News";
+import Post from "./pages/Post";
 
 function App() {
-    const [users, setUsers] = useState(usersData);
-    const [token, setToken] = useState(false);
-    const [currentUser, setCurrentUser] = useState(null);
+    const [users, setUsers] = useState(JSON.parse(localStorage.getItem("users")) || []);
+    const [posts, setPosts] = useState(JSON.parse(localStorage.getItem("posts")) || []);
+    const [token, setToken] = useState(localStorage.getItem("token") || false);
+    const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("currentUser")) || null);
+
+    useEffect(() => {
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("posts", JSON.stringify(posts));
+        localStorage.setItem("token", token);
+        localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    }, [users, posts, token, currentUser]);
 
     return (
         <>
             <Routes>
                 <Route path="/signup" element={<Signup setUsers={setUsers} setToken={setToken} setCurrentUser={setCurrentUser}/>}/>
                 <Route path="/signin" element={<Signin users={users} setToken={setToken} setCurrentUser={setCurrentUser}/>}/>
-                <Route element={<ProtectedRoutes token={token} currentUser={currentUser}/>}>
+                <Route element={<ProtectedRoutes token={token} setToken={setToken} currentUser={currentUser} setCurrentUser={setCurrentUser}/>}>
                     <Route path="/" element={<Home/>}/>
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="/news" element={<News posts={posts}/>}/>
+                    <Route path="/post" element={<Post setPosts={setPosts}/>}/>
                 </Route>
             </Routes>
         </>
