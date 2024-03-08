@@ -5,10 +5,12 @@ import phones from "./data/phones";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import Phones from "./pages/Phones";
+import VotingPage from "./pages/VotingPage";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Flex from "./utilities/Flex";
 import Button from "./components/Button";
+import Practice from "./pages/Practice";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -23,25 +25,27 @@ function App() {
     }
 
     const [sidebar, setSidebar] = useState(false);
+    const hanldleClick = () => setSidebar(prev => !prev);
 
     return (
         <>  
             <Flex width={"100%"}>
                 <Sidebar width={sidebar ? "300px" : "0"} display={sidebar ? "block" : "none"}>
-                    {sidebar && <Button onClick={() => setSidebar(prev => !prev)} padding={"10px 16px"}>Close</Button>}
+                    {sidebar && <Button onClick={hanldleClick} padding={"10px 16px"}>Close</Button>}
                 </Sidebar>
                 <Flex direction={"column"} flex={"1"}>
                     <Navbar/>
                     <Routes>
                         <Route path="/" element={<Home products={products}/>}/>
                         <Route path="/admin" element={<Admin handleSubmit={handleSubmit} product={product} setProduct={setProduct}/>}/>
-                        {/* <Route path="/product/:id" element={<Products array={products}/>}/> */}
                         <Route path="/phones/:id" element={<Phones phones={phones}/>}/>
+                        <Route path="/votingpage" element={<VotingPage/>}/>
+                        <Route path="/practice" element={<Practice/>}/>
                     </Routes>
                 </Flex>
             </Flex>
 
-            {!sidebar ? <Button onClick={() => setSidebar(prev => !prev)} padding={"10px 16px"}>Open</Button> : null}
+            {!sidebar ? <Button onClick={hanldleClick} padding={"10px 16px"}>Open</Button> : null}
         </>
     );
 }

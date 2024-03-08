@@ -26,6 +26,8 @@ function Navbar() {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/about">About</NavLink>
                     <NavLink to="/products">Products</NavLink>
+                    <NavLink to="/votingpage">VotingPage</NavLink>
+                    <NavLink to="/practice">Practice</NavLink>
                 </Flex>
                 {user ? <Text>{user.userName}</Text>
                 : <Button onClick={() => setLogin(prev => !prev)} padding={"10px 16px"}>Log In</Button>

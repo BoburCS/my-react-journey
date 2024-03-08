@@ -3,7 +3,6 @@ import Color from "../../utilities/Color";
 
 const StyledCard = styled.div`
     padding: 20px;
-    width: 240px;
     border-radius: 16px;
     background-color: ${Color.PrimaryBgColor};
     cursor: pointer;
