@@ -7,7 +7,7 @@ function ProtectedRoutes({token, setToken, currentUser, setCurrentUser}) {
     return token ? (
         <>
             <Navbar setToken={setToken} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-            <Flex>
+            <Flex p={"30px"}>
                 <Sidebar currentUser={currentUser}/>
                 <Outlet/>
             </Flex>

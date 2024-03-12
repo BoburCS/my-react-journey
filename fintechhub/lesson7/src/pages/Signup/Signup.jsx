@@ -7,17 +7,24 @@ import Button from "../../components/Button";
 import Text from "../../utilities/Text";
 import Color from "../../utilities/Color";
 
-function Signup({ setUsers, setToken, setCurrentUser }) {
+function Signup({ users, setUsers, setToken, setCurrentUser }) {
     const navigate = useNavigate();
     
     const signupHandler = (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
         const data = {...Object.fromEntries(formData), id: uuidv4()};
+        const userExists = users.find(user => user.userEmail === data.userEmail);
+        
+        if (userExists) {
+            alert("User already exists!");
+            return;
+        }
+
         setUsers(previous => [...previous, data]);
         setToken(prev => !prev);
         setCurrentUser(data);
-        navigate("/");
+        navigate("/signin");
         event.target.reset();
     }
 

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import "./weather.css";
 
 const API = {
     key: "2889df3545b410591ec6628905e3bec6",
@@ -10,6 +11,8 @@ function Weather() {
     const [location, setLocation] = useState("Tashkent");
     const [error, setError] = useState("No data");
     const locationRef = useRef();
+
+    useEffect(() => locationRef.current.focus(), []);
 
     useEffect(() => {
         if (location) {
@@ -37,17 +40,19 @@ function Weather() {
 
     return (
         <div>
-            <input ref={locationRef} type="text" placeholder="Enter the city or town..."/>
-            <button onClick={handleClick}>Search</button>
+            <div className="searchbar-container">
+                <input ref={locationRef} className="searchbar" type="text" placeholder="Enter the city or town..."/>
+                <button onClick={handleClick}>Search</button>
+            </div>
 
             {data ? (
-                <>
-                    <h1>Location: {data.name}</h1>
-                    <h1>Feels like: {data.main.feels_like}</h1>
-                    <h1>Weather Description: {data.weather[0].description}</h1>
-                    <h1>Temprature: {data.main.temp}</h1>
-                    <h1>Wind Speed: {data.wind.speed}</h1>
-                </>
+                <div className="info-container">
+                    <h3>Location: {data.name}</h3>
+                    <h3>Feels like: {data.main.feels_like}</h3>
+                    <h3>Weather Description: {data.weather[0].description}</h3>
+                    <h3>Temprature: {data.main.temp}</h3>
+                    <h3>Wind Speed: {data.wind.speed}</h3>
+                </div>
             ) : (
                 <h1>{error}</h1>
             )}            

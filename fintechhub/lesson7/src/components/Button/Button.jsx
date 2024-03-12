@@ -11,6 +11,7 @@ const StyledButton = styled.button`
     border-radius: 6px;
     outline: none;
     background-color: ${({bg}) => bg || Color.Blue};
+    align-self: ${({salign}) => salign};
     cursor: pointer;
 `;
 

@@ -5,6 +5,55 @@
     font-family: "Roboto", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    transform: scale(1.2);
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
 .image-container img {
     width: 100%;
+    border-radius: 16px;
+    transition: .4s all;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.video-container {
+    margin: auto;
+    padding: 20px;    
+    width: 280px;
+    height: auto;
+    background-color: red;
+    position: relative;
+}
+
+video {
+    width: 100%;
+}
+
+.video-container .controls {
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.controls .icon {
+    color: white;
+    font-size: 2rem;
 }

@@ -1,7 +1,11 @@
+import Flex from "../../utilities/Flex";
+import Text from "../../utilities/Text";
 
 function Home() {
     return (
-        <h1>Home</h1>
+        <Flex p={"30px"}>
+            <Text fs={"24px"}>Home</Text>
+        </Flex>
     );
 }
 

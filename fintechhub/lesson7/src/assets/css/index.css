@@ -16,3 +16,19 @@ a {
 input:focus {
     outline: 2px solid #316FF6;
 }
+
+.carouselImage {
+    width: 300px;
+}
+
+.btn-left,
+.btn-right {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background-color: #316FF6;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.searchbar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar {
+    padding: 8px 16px;
+    width: 300px;
+    outline: none;
+}
+
+.searchbar-container > button {
+    padding: 8px 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.info-container {
+    padding: 30px;
+}

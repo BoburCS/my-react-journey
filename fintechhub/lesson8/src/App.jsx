@@ -1,20 +1,38 @@
+import { useState } from "react";
+import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Weather from "./pages/Weather";
-import Photos from "./pages/Photos";
+import Context from "./Context/Context";
 import Navbar from "./components/Navbar/Navbar";
+import lazyLoad from "./functions/lazyLoad";
+
+const Home = lazyLoad("../pages/Home");
+const Weather = lazy(() => wait(1000).then(() => import("./pages/Weather")));
+const Photos = lazy(() => wait(1000).then(() => import("./pages/Photos")));
+const Video = lazy(() => wait(1000).then(() => import("./pages/Video")));
+const Reducer = lazy(() => wait(1000).then(() => import("./pages/Reducer")));
 
 function App() {
+    const [name, setName] = useState("Bobur");
     return (
         <>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/weather" element={<Weather />} />
-                <Route path="/photos" element={<Photos/>}/>
-            </Routes>
+            <Context.Provider value={{ name, setName }}>
+                <Navbar />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/weather" element={<Weather />} />
+                        <Route path="/photos" element={<Photos />} />
+                        <Route path="/video" element={<Video />} />
+                        <Route path="/reducer" element={<Reducer />} />
+                    </Routes>
+                </Suspense>
+            </Context.Provider>
         </>
     );
+}
+
+function wait(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }
 
 export default App;

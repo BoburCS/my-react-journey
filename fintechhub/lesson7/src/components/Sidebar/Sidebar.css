@@ -1,0 +1,9 @@
+.sidebar-links {
+    padding-bottom: 4px;
+    width: 100%;
+    border-bottom: 1px solid #316FF6;
+}
+
+.sidebar-links:focus {
+    font-size: 20px;
+}

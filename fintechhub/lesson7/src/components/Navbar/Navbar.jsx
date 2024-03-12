@@ -22,7 +22,9 @@ function Navbar({setToken, currentUser, setCurrentUser}) {
                 <Input placeholder="Search..." p={"6px 10px"} w={"450px"}/>
             </Flex>
             <Flex align={"center"} gap={"20px"}>
-                <Text color={Color.Blue} fs={"18px"}>{currentUser?.userName}</Text>
+                <NavLink to="/profile">
+                    <Text color={Color.Blue} fs={"18px"}>{currentUser?.userName}</Text>
+                </NavLink>
                 <Button onClick={signoutHandler} fs={"16px"} p={"6px 10px"} bg={Color.Red}>Sign out</Button>
             </Flex>
         </Flex>
