@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import userContext from "../../context/userContext";
 
 function Signin() {
@@ -21,11 +21,15 @@ function Signin() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input name="email" type="email" placeholder="email" required />
-            <input name="password" type="password" placeholder="password" required />
-            <button type="submit">Sign In</button>
-        </form>
+        <>
+            <form onSubmit={handleSubmit}>
+                <input name="email" type="email" placeholder="email" required />
+                <input name="password" type="password" placeholder="password" required />
+                <button type="submit">Sign In</button>
+            </form>
+
+            <p>Do not have an account? <Link to="/signup">sign up</Link></p>
+        </>
     );
 }
 

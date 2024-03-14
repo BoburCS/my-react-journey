@@ -7,6 +7,7 @@ function Navbar() {
     return (
         <nav>
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/foods">Foods</NavLink>
             <p>Welcome {user?.name}!</p>
         </nav>
     );
