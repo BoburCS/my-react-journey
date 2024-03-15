@@ -1,7 +1,18 @@
 .main {
-    margin: auto;
     padding: 20px;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 20px;
+}
+
+.btn-sidebar {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: transparent;
 }

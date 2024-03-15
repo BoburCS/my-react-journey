@@ -1,4 +1,5 @@
 import Flex from "../../utils/Flex";
+import "./BasketFoodCard.css";
 
 function BasketFoodCard({ food, deleteBasket }) {
     return (

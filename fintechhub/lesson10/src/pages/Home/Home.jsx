@@ -8,7 +8,6 @@ import "./Home.css";
 function Home() {
     const { state, dispatch } = useContext(FoodsContext);
     const [categories, setCategories] = useState([]);
-    const [foods, setFoods] = useState(state.foods);
 
     useEffect(() => {
         const CategorySet = new Set();
@@ -16,13 +15,7 @@ function Home() {
         setCategories([...CategorySet]);
     }, [state.foods]);
 
-    const filteredFoods = (event) => {
-        if (event.target.textContent === "All") {
-            setFoods(state.foods);
-            return;
-        }
-        setFoods(state.foods.filter(food => food.category === event.target.textContent));
-    }
+    const filteredFoods = (event) => dispatch({ type: "Filter", payload: event.target.textContent});
 
     const addBasket = (id) => dispatch({ type: "AddBasket", payload:  id});
 
@@ -30,18 +23,18 @@ function Home() {
         <Flex w={"100%"}>
             <Sidebar>
                 <h1>Categories</h1>
-                <button onClick={filteredFoods}>All</button>
+                <button onClick={filteredFoods} className="btn-sidebar">All</button>
                 {categories.length > 0 ? (
                     categories.map(category => (
                         <div key={category}>
-                            <button onClick={filteredFoods}>{category}</button>
+                            <button onClick={filteredFoods} className="btn-sidebar">{category}</button>
                         </div>
                     ))
                 ) : null}
             </Sidebar>
             <main className="main">
-                {foods.length > 0 ? (
-                    foods.map(food => (
+                {state.filteredFoods.length > 0 ? (
+                    state.filteredFoods.map(food => (
                         <FoodCard key={food.id} {...food} addBasket={addBasket}/>
                     ))
                 ) : <p>no data</p> 

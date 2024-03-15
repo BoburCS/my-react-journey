@@ -6,6 +6,9 @@ const StyledSidebar = styled.aside`
     width: 330px;
     height: 100vh;
     background-color: orange;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 `;
 
 function Sidebar({ children }) {

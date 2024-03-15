@@ -2,10 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: aliceblue;
 }
 
 a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
 }

@@ -1,19 +1,14 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import FoodsContext from "../../context/FoodsContext";
-import Flex from "../../utils/Flex";
 import BasketFoodCard from "../../components/BasketFoodCard";
+import Flex from "../../utils/Flex";
 
 function Basket() {
     const { state, dispatch } = useContext(FoodsContext);
 
     const deleteBasket = (id) => dispatch({ type: "DeleteBasket", payload: id });
 
-    const [total, setTotal] = useState(null);
-
-    useEffect(() => {
-        const totalPrice = state.basket.reduce((total, food) => total + food.price, 0);
-        setTotal(totalPrice);
-    }, [state.basket]);
+    useEffect(() => dispatch({ type: "TotalPrice" }), [state.basket]);
 
     return (
         <>
@@ -31,7 +26,7 @@ function Basket() {
 
             <Flex direction={"column"}>
                 <h1>Total Price</h1>
-                <p>Total: {total.toFixed(2)}</p>
+                <p>Total: {state.totalPrice?.toFixed(2)}</p>
             </Flex>
         </>
     );
