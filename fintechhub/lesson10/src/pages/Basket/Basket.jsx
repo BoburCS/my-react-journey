@@ -5,14 +5,12 @@ import Flex from "../../utils/Flex";
 
 function Basket() {
     const { state, dispatch } = useContext(FoodsContext);
-
     const deleteBasket = (id) => dispatch({ type: "DeleteBasket", payload: id });
-
     useEffect(() => dispatch({ type: "TotalPrice" }), [state.basket]);
 
     return (
-        <>
-            <Flex direction={"column"} p={"30px"} gap={"20px"}>
+        <Flex w={"100"}>
+            <Flex w={"75%"} direction={"column"} p={"30px"} gap={"20px"}>
                 {state.basket.length > 0 ? (
                     state.basket.map(food => (
                         <BasketFoodCard key={food.id} food={food} deleteBasket={deleteBasket}/>
@@ -28,7 +26,7 @@ function Basket() {
                 <h1>Total Price</h1>
                 <p>Total: {state.totalPrice?.toFixed(2)}</p>
             </Flex>
-        </>
+        </Flex>
     );
 }
 

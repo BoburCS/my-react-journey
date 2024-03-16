@@ -9,6 +9,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/reserve">Reserve</NavLink>
             <NavLink to="/basket">Basket({state.basket.length})</NavLink>
         </nav>
     );
