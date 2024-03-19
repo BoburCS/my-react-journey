@@ -10,6 +10,7 @@ function Navbar() {
         <nav className="navbar">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/reserve">Reserve</NavLink>
+            <NavLink to="/restapi">Rest Api</NavLink>
             <NavLink to="/basket">Basket({state.basket.length})</NavLink>
         </nav>
     );

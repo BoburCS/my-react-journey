@@ -9,9 +9,7 @@ type ContainerProps = {
     }[];
 }
 
-function Container(props: ContainerProps) {
-    const { products } = props;
-
+function Container({ products }: ContainerProps) {
     return (
         <div className="container">
             {products.map(product => (

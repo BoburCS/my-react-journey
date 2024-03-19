@@ -1,16 +1,10 @@
-// Types of Object that is coming from App
-interface UserInformation {
-    name: string;
-    age: number;
-    isMarried: boolean;
-}
 
-function Header({ User }: { User: UserInformation }) {
+function Header() {
     return (
         <header>
             <nav>
                 <div>
-                    <h1>Hello, {User.name}</h1>
+                    <h1>Navbar</h1>
                 </div>
             </nav>
         </header>

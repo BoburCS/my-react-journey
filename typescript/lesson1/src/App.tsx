@@ -7,14 +7,10 @@ import Union from "./pages/Union";
 import Button from "./components/Button/Button";
 import { products } from "./data/products.ts";
 import Container from "./components/Container/Container.js";
-import Signin from "./pages/Signin/Signin.tsx";
+import Signup from "./pages/Signup/Signup.tsx";
+import Login from "./pages/Login";
 import { useState } from "react";
-
-const User = {
-    name: "Bobur",
-    age: 19,
-    isMarried: false
-}
+import { User } from "./types/User.types.ts";
 
 const UserInfo = {
     firstName: "Bruce",
@@ -30,13 +26,16 @@ const HerosList = [
 ];
 
 function App() {
-    const [users, setUsers] = useState([{name: "Bobur", email: "bob@gmail.com", password: "1", id: 1}]);
+    const [users, setUsers] = useState([{} as User]);
+    const [user, setUser] = useState({} as User);
+
     return (
         <>
-            <Header User={User}/>
+            <Header/>
             <Routes>
-                <Route path="/" element={<Home name={"Bobur"} />} />
-                <Route path="/signin" element={<Signin users={users} setUsers={setUsers}/>}/>
+                <Route path="/" element={<Home user={user} />} />
+                <Route path="/login" element={<Login users={users} setUser={setUser}/>} />
+                <Route path="/signup" element={<Signup users={users} setUsers={setUsers}/>}/>
                 <Route path="/profile" element={<Profile UserInfo={UserInfo}/>}/>
                 <Route path="/heros" element={<Heros players={HerosList}/>}/>
                 <Route path="/union" element={<Union status="success"/>}/>

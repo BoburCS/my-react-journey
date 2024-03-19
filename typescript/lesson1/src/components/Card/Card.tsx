@@ -9,7 +9,7 @@ type CardProps = {
     };
 }
 
-function Card(props: CardProps) {
+function Card({ product }: CardProps) {
     const [count, setCount] = useState(0);
 
     const handleCount = (type: string) => {
@@ -20,8 +20,8 @@ function Card(props: CardProps) {
 
     return (
         <div className="card">
-            <h2>{props.product.title}</h2>
-            <h2>{props.product.price}</h2>
+            <h2>{product.title}</h2>
+            <h2>{product.price}</h2>
             <button onClick={() => handleCount("-")}>-</button>
             <h3>{count}</h3>
             <button onClick={() => handleCount("+")}>+</button>

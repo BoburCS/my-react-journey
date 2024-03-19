@@ -2,11 +2,11 @@ type UnionProps = {
     status: "loading" | "success" | "error"; // Union
 }
 
-function Union(props: UnionProps) {
+function Union({ status }: UnionProps) {
     let message;
-    if (props.status === "loading") message = "Loading";
-    if (props.status === "success") message = "Successfully fetched the data";
-    if (props.status === "error") message = "Error";
+    if (status === "loading") message = "Loading";
+    if (status === "success") message = "Successfully fetched the data";
+    if (status === "error") message = "Error";
     
     return (
         <div>

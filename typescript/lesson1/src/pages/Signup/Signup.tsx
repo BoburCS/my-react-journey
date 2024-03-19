@@ -1,22 +1,20 @@
-type User = {
-    name: string;
-    email: string;
-    password: string;
-    id: number;
-}
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { User } from "../../types/User.types";
 
 type SigninProps = {
     users: User[];
     setUsers: React.Dispatch<React.SetStateAction<User[]>>;
 }
 
-function Signin(props: SigninProps) {
-    const { users, setUsers } = props;
+function Signin({ users, setUsers }: SigninProps) {
+    const navigate = useNavigate();
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(event.target as HTMLFormElement)) as Partial<User>;
         setUsers(prev => [...prev, {...data, id: users.length + 1} as User]);
+        navigate("/login");
         (event.target as HTMLFormElement).reset();        
     }
 
@@ -26,6 +24,7 @@ function Signin(props: SigninProps) {
             <input name="email" type="email" placeholder="email"/>
             <input name="password" type="password" placeholder="password"/>
             <button type="submit">Sign in</button>
+            <p>Already signed in? <Link to="/login">Login</Link></p>
         </form>
     );
 }
