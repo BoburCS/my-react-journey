@@ -53,8 +53,10 @@ function Practice() {
     }
 
     const handleSearch = (event) => {
+        let filtered = Hotels;
         const searchValue = (event.target.value).trim().toLowerCase().replaceAll(" ", "");
-        
+        if (!searchValue) return setData(Hotels);
+        setData(filtered.filter(hotel => hotel.name.trim().toLowerCase().replaceAll(" ", "").includes(searchValue)));
     }
 
     return (
