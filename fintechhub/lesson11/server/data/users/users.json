@@ -10,23 +10,5 @@
     "name": "admin",
     "email": "admin@vip.com",
     "password": "admin"
-  },
-  {
-    "id": 3,
-    "name": "Aziza",
-    "email": "aziwka@gmail.com",
-    "password": "a"
-  },
-  {
-    "name": "Abdulhay",
-    "email": "abu@gmail.com",
-    "password": "abu",
-    "id": "c1df8182-22bb-40b0-8804-60330737df7b"
-  },
-  {
-    "name": "Muhammadbobur",
-    "email": "bobur0218.prvt@gmail.com",
-    "password": "bobur0218",
-    "id": "5327820a-7e8c-4353-b4fb-2104cacaa51c"
   }
 ]

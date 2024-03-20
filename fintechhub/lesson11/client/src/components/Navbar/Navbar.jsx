@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import UsersContext from "../../context/usersContext";
+import IconDua from "../../assets/icons/icon-dua.svg";
+import "./navbar.css";
 
 function Navbar() {
 
@@ -12,11 +14,19 @@ function Navbar() {
     }
 
     return (
-        <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/namaz">Namaz</NavLink>
+        <nav className="navbar">
+            <div className="navbar-left">
+                <NavLink to="/" className="nav-home-logo">
+                    <img src={IconDua} alt="Icon Dua" />
+                    <h2>MyNamaz</h2>
+                </NavLink>
+            </div>
 
-            <button onClick={handleSignout}>Sign Out</button>
+            <div className="navbar-right">
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/namaz">Namaz</NavLink>
+                <button onClick={handleSignout}>Sign Out</button>
+            </div>
         </nav>
     );
 }

@@ -1,0 +1,32 @@
+.navbar {
+    padding: 20px 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-home-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-home-logo > h2 {
+    font-size: 20px;
+    font-family: "Bruno Ace", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar-right > a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
