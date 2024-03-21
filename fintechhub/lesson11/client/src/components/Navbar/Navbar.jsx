@@ -5,8 +5,8 @@ import IconDua from "../../assets/icons/icon-dua.svg";
 import "./navbar.css";
 
 function Navbar() {
-
-    const { setUser, setToken } = useContext(UsersContext);
+    
+    const { setUser, setToken, basket } = useContext(UsersContext);
 
     const handleSignout = () => {
         setUser(null);
@@ -25,6 +25,8 @@ function Navbar() {
             <div className="navbar-right">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/namaz">Namaz</NavLink>
+                <NavLink to="/products">Products</NavLink>
+                <NavLink to="/basket">Basket({basket.length})</NavLink>
                 <button onClick={handleSignout}>Sign Out</button>
             </div>
         </nav>

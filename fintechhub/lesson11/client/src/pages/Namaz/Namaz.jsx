@@ -49,7 +49,7 @@ function Namaz() {
 
     return (
         <section className="namaz-main">
-            <h1>Toshkent vaqti uchun namoz vaqti</h1>
+            <h1>{location} vaqti uchun namoz vaqti</h1>
             <p className="date">{date}</p>
 
             <div className="circle">

@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "category": "Tech",
+        "name": "HP Pavilion 15",
+        "image": "hp",
+        "price": 650,
+        "characteristics": "15.6-inch FHD, Intel Core i5-1035G1, 8GB RAM, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 2,
+        "category": "Tech",
+        "name": "Acer Aspire 5",
+        "image": "acer",
+        "price": 600,
+        "characteristics": "15.6-inch FHD, AMD Ryzen 5 3500U, 8GB DDR4, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 3,
+        "category": "Tech",
+        "name": "Dell Inspiron 15",
+        "image": "dell",
+        "price": 700,
+        "characteristics": "15.6-inch FHD, Intel Core i5-1035G1, 8GB RAM, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 4,
+        "category": "Tech",
+        "name": "Lenovo IdeaPad 3",
+        "image": "lenovo",
+        "price": 550,
+        "characteristics": "15.6-inch FHD, AMD Ryzen 5 3500U, 8GB DDR4, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 5,
+        "category": "Tech",
+        "name": "Asus VivoBook 15",
+        "image": "asus",
+        "price": 650,
+        "characteristics": "15.6-inch FHD, Intel Core i5-1035G1, 8GB RAM, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 6,
+        "category": "Tech",
+        "name": "Apple MacBook Air",
+        "image": "macbookair",
+        "price": 1000,
+        "characteristics": "13.3-inch Retina, Intel Core i3, 8GB RAM, 256GB SSD, macOS, Silver"
+    },
+    {
+        "id": 7,
+        "category": "Tech",
+        "name": "Apple MacBook Pro",
+        "image": "macbookpro",
+        "price": 1300,
+        "characteristics": "13.3-inch Retina, Intel Core i5, 8GB RAM, 256GB SSD, macOS, Silver"
+    },
+    {
+        "id": 8,
+        "category": "Tech",
+        "name": "Microsoft Surface Laptop 3",
+        "image": "microsoft",
+        "price": 1200,
+        "characteristics": "13.5-inch PixelSense, Intel Core i5, 8GB RAM, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 9,
+        "category": "Tech",
+        "name": "Microsoft Surface Pro 7",
+        "image": "microsoft",
+        "price": 1000,
+        "characteristics": "12.3-inch PixelSense, Intel Core i5, 8GB RAM, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 10,
+        "category": "Tech",
+        "name": "HP Envy x360",
+        "image": "hp",
+        "price": 800,
+        "characteristics": "15.6-inch FHD, AMD Ryzen 5 3500U, 8GB DDR4, 256GB SSD, Windows 10 Home, Silver"
+    },
+    {
+        "id": 11,
+        "category": "Cars",
+        "name": "Toyota Corolla",
+        "image": "toyota",
+        "price": 20000,
+        "characteristics": "1.8L, 4-cylinder, 139hp, 126lb-ft, 30/38mpg"
+    },
+    {
+        "id": 12,
+        "category": "Cars",
+        "name": "Honda Civic",
+        "image": "honda",
+        "price": 22000,
+        "characteristics": "2.0L, 4-cylinder, 158hp, 138lb-ft, 30/38mpg"
+    },
+    {
+        "id": 13,
+        "category": "Cars",
+        "name": "Nissan Sentra",
+        "image": "nissan",
+        "price": 18000,
+        "characteristics": "2.0L, 4-cylinder, 149hp, 146lb-ft, 29/39mpg"
+    },
+    {
+        "id": 14,
+        "category": "Cars",
+        "name": "Chevrolet Cruze",
+        "image": "chevrolet",
+        "price": 19000,
+        "characteristics": "1.4L, 4-cylinder, 153hp, 177lb-ft, 28/38mpg"
+    },
+    {
+        "id": 15,
+        "category": "Cars",
+        "name": "Hyundai Elantra",
+        "image": "hyundai",
+        "price": 21000,
+        "characteristics": "2.0L, 4-cylinder, 147hp, 132lb-ft, 30/40mpg"
+    },
+    {
+        "id": 16,
+        "category": "Cars",
+        "name": "Kia Forte",
+        "image": "kia",
+        "price": 19000,
+        "characteristics": "2.0L, 4-cylinder, 147hp, 132lb-ft, 31/41mpg"
+    },
+    {
+        "id": 17,
+        "category": "Cars",
+        "name": "Volkswagen Jetta",
+        "image": "volkswagen",
+        "price": 23000,
+        "characteristics": "1.4L, 4-cylinder, 147hp, 184lb-ft, 30/40mpg"
+    },
+    {
+        "id": 18,
+        "category": "Cars",
+        "name": "Mazda 3",
+        "image": "mazda",
+        "price": 25000,
+        "characteristics": "2.5L, 4-cylinder, 186hp, 186lb-ft, 26/35mpg"
+    },
+    {
+        "id": 19,
+        "category": "Cars",
+        "name": "Subaru Impreza",
+        "image": "subaru",
+        "price": 24000,
+        "characteristics": "2.0L, 4-cylinder, 152hp, 145lb-ft, 28/36mpg"
+    },
+    {
+        "id": 20,
+        "category": "Cars",
+        "name": "Ford Focus",
+        "image": "ford",
+        "price": 20000,
+        "characteristics": "2.0L, 4-cylinder, 160hp, 146lb-ft, 26/36mpg"
+    },
+    {
+        "id": 21,
+        "category": "Clothes",
+        "name": "T-shirt",
+        "image": "tshirt",
+        "price": 20,
+        "characteristics": "100% cotton, short sleeve, crew neck, regular fit",
+        "type": "Male"
+    },
+    {
+        "id": 22,
+        "category": "Clothes",
+        "name": "Polo shirt",
+        "image": "poloshirt",
+        "price": 30,
+        "characteristics": "100% cotton, short sleeve, polo collar, regular fit",
+        "type": "Male"
+    },
+    {
+        "id": 23,
+        "category": "Clothes",
+        "name": "Shirt",
+        "image": "shirt",
+        "price": 40,
+        "characteristics": "100% cotton, long sleeve, button-down collar, regular fit",
+        "type": "Female"
+    },
+    {
+        "id": 24,
+        "category": "Clothes",
+        "name": "Blouse",
+        "image": "blouse",
+        "price": 50,
+        "characteristics": "100% cotton, long sleeve, v-neck, regular fit",
+        "type": "Female"
+    },
+    {
+        "id": 25,
+        "category": "Clothes",
+        "name": "Jeans",
+        "image": "jeans",
+        "price": 60,
+        "characteristics": "100% cotton, regular fit, straight leg, mid rise",
+        "type": "Male"
+    },
+    {
+        "id": 26,
+        "category": "Clothes",
+        "name": "Trousers",
+        "image": "trousers",
+        "price": 70,
+        "characteristics": "100% cotton, regular fit, straight leg, mid rise",
+        "type": "Female"
+    },
+    {
+        "id": 27,
+        "category": "Clothes",
+        "name": "Shorts",
+        "image": "shorts",
+        "price": 30,
+        "characteristics": "100% cotton, regular fit, straight leg, mid rise",
+        "type": "Male"
+    },
+    {
+        "id": 28,
+        "category": "Clothes",
+        "name": "Skirt",
+        "image": "skirt",
+        "price": 40,
+        "characteristics": "100% cotton, regular fit, straight leg, mid rise",
+        "type": "Female"
+    },
+    {
+        "id": 29,
+        "category": "Clothes",
+        "name": "Sweater",
+        "image": "sweater",
+        "price": 50,
+        "characteristics": "100% cotton, regular fit, crew neck, long sleeve",
+        "type": "Male"
+    },
+    {
+        "id": 30,
+        "category": "Clothes",
+        "name": "Cardigan",
+        "image": "cardigan",
+        "price": 60,
+        "characteristics": "100% cotton, regular fit, v-neck, long sleeve",
+        "type": "Male"
+    }
+]

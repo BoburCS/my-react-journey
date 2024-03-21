@@ -1,0 +1,15 @@
+.basket-card {
+    color: var(--primary-bg);
+    padding: 30px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basket-card > button {
+    color: var(--green);
+    background-color: var(--primary-bg);
+}
