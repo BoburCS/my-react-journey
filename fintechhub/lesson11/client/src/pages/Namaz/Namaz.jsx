@@ -56,14 +56,14 @@ function Namaz() {
                 <h5>Namoz vaqti</h5>
                 <div className="time-container">
                     <div className="time">
-                        <h1>{currentTime.getHours()}</h1>
+                        <h1>{String(currentTime.getHours()).padStart(2, "0")}</h1>
                         <span>Soat</span>
                     </div>
                     <div className="border">
 
                     </div>
                     <div className="time">
-                        <h1>{currentTime.getMinutes()}</h1>
+                        <h1>{String(currentTime.getMinutes()).padStart(2, "0")}</h1>
                         <span>Daqiqa</span>
                     </div>
                 </div>
