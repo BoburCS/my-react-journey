@@ -17,7 +17,7 @@ const api = {
 }
 
 function Namaz() {
-    const [location, setLocation] = useState("Tashkent");
+    const [location, setLocation] = useState("Toshkent");
     const [currentTime, setCurrentTime] = useState(new Date());
     const [namaz, setNamaz] = useState(null);
     const [date, setDate] = useState(null); 

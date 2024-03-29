@@ -10,5 +10,11 @@
     "name": "admin",
     "email": "admin@vip.com",
     "password": "admin"
+  },
+  {
+    "name": "suzy",
+    "email": "suzy@gmail.com",
+    "password": "suzy",
+    "id": "8871a4eb-21e7-49ff-8744-248b31b104b2"
   }
 ]

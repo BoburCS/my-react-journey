@@ -17,10 +17,12 @@ function ProductDetail() {
 
     async function fetchData() {
         try {
-            const res = await axios.get(`http://localhost:5000/products/${id}`);
+            const res = await axios.get(`http://localhost:8000/products/${id}`);
             setDetail(res.data);
             const image = await axios.get(`${api.url}/search/photos?page=1&query=${res.data.image}&client_id=${api.key}`);
             setImage(image.data.results[0].urls.small);
+            console.log(image.data.results[0].urls.small)
+            console.log(image)
         }
         catch(err) {
             console.log(err);

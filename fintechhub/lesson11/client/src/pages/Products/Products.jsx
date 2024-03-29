@@ -10,7 +10,7 @@ function Products() {
 
     async function fetchData() {
         try {
-            const res = await axios.get("http://localhost:5000/products");
+            const res = await axios.get("http://localhost:8000/products");
             setProducts(res.data.products);
         }
         catch(err) {

@@ -27,7 +27,10 @@ function Navbar() {
                 <NavLink to="/namaz">Namaz</NavLink>
                 <NavLink to="/products">Products</NavLink>
                 <NavLink to="/basket">Basket({basket.length})</NavLink>
-                <button onClick={handleSignout}>Sign Out</button>
+                <NavLink to="/practice">Practice</NavLink>
+                <NavLink to="/recipe">Recipe</NavLink>
+                <NavLink to="/lesson">Lesson13</NavLink>
+                <button onClick={handleSignout} style={{borderRadius: "8px"}}>Sign Out</button>
             </div>
         </nav>
     );

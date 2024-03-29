@@ -10,7 +10,7 @@ function Signin() {
 
     async function fetchData () {
         try {
-            const res = await axios.get("http://localhost:5000/users");
+            const res = await axios.get("http://localhost:8000/users");
             setUsers(res.data.users);
             console.log(res.data.users);
         }

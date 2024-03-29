@@ -10,7 +10,7 @@ function Signup() {
 
         const newUser = { ...data, id: uuidv4() };
 
-        fetch("http://localhost:5000/users", {method: "POST", headers: {"Content-Type": "application/json",}, body: JSON.stringify(newUser),})
+        fetch("http://localhost:8000/users", {method: "POST", headers: {"Content-Type": "application/json",}, body: JSON.stringify(newUser),})
             .then(res => res.json())
             .then(data => console.log("Success", data))
             .catch(err => console.log("Error", err));
