@@ -1,0 +1,100 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Bobur",
+      "email": "bobur@gmail.com",
+      "password": "1",
+      "tasks": [
+        "1234",
+        "1330"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin"
+    },
+    {
+      "id": "3",
+      "name": "Robert",
+      "email": "robert@gmail.com",
+      "password": "robert",
+      "tasks": [
+        "5c7f"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "John",
+      "email": "john@gmail.com",
+      "password": "john",
+      "tasks": [
+        "1235"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1234",
+      "title": "Task 1",
+      "description": "Description 1",
+      "status": "To Do",
+      "user": "bobur@gmail.com"
+    },
+    {
+      "id": "1235",
+      "title": "Task 2",
+      "description": "Description 2",
+      "status": "To Do",
+      "user": "bobur@gmail.com"
+    },
+    {
+      "id": "1330",
+      "title": "write sum func",
+      "description": "two params",
+      "status": "To Do",
+      "user": "bobur@gmail.com"
+    },
+    {
+      "id": "5c7f",
+      "title": "create usefetch hook",
+      "description": "it should have crud",
+      "status": "To Do",
+      "user": "bobur@gmail.com"
+    }
+  ],
+  "products": [
+    {
+      "title": "Product 1",
+      "description": "Description 1",
+      "price": "10000",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Product 2",
+      "description": "Description 2",
+      "price": 200
+    },
+    {
+      "id": "3",
+      "title": "Product 3",
+      "description": "Description 3",
+      "price": 300
+    },
+    {
+      "title": "apple",
+      "description": "green apple",
+      "price": "20",
+      "id": "f0f0"
+    },
+    {
+      "title": "tarvuz",
+      "description": "aa",
+      "price": "15",
+      "id": "25c2"
+    }
+  ]
+}

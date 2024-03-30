@@ -14,6 +14,7 @@ const Signup = lazy(() => import("./pages/Signup"));
 
 function App() {
     const [state, dispatch] = useReducer(reducer, initialState);
+    
     useEffect(() => dispatch({ type: "SET_USERS", payload: [ ...state.users, ...usersData ] }), []);
 
     const [tasks, setTasks] = useState([]);
