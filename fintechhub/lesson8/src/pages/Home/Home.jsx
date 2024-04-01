@@ -6,7 +6,9 @@ function Home() {
     const { name } = useContext(Context);
 
     return (
-        <h1>Welcome, {name}</h1>
+        <div className="py-5 px-20 ">
+            <h1>Welcome, {name}</h1>
+        </div>
     );
 }
 
