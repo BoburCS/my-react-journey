@@ -1,14 +1,13 @@
-import React from "react";
 import styled from "styled-components";
 
 const StyledFlex = styled.div`
-	margin: ${({ margin = "0" }) => margin};
+	margin: ${({ m = "0" }) => m};
 	margin-top: ${({ mt }) => (mt ? mt : "unset")};
 	margin-right: ${({ mr }) => (mr ? mr : "unset")};
 	margin-bottom: ${({ mb }) => (mb ? mb : "unset")};
 	margin-left: ${({ ml }) => (ml ? ml : "unset")};
-	padding: ${({ padding = "0" }) => padding};
-	width: ${({ width }) => width};
+	padding: ${({ p = "0" }) => p};
+	width: ${({ w }) => w};
 	border-radius: ${({ radius = "0" }) => radius};
 	background-color: ${({ bg }) => bg};
 	display: flex;
@@ -20,8 +19,8 @@ const StyledFlex = styled.div`
 	gap: ${({ gap = "0" }) => gap};
 `;
 
-function Flex(props) {
-	return <StyledFlex {...props}/>;
+function Flex(rest) {
+	return <StyledFlex {...rest}/>;
 }
 
 export default Flex;
