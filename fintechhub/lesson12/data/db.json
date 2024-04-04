@@ -67,16 +67,10 @@
   ],
   "products": [
     {
-      "title": "Product 1",
-      "description": "Description 1",
-      "price": "10000",
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "title": "Product 2",
+      "title": "Product 2000",
       "description": "Description 2",
-      "price": 200
+      "price": "20000",
+      "id": "2"
     },
     {
       "id": "3",
@@ -95,6 +89,12 @@
       "description": "aa",
       "price": "15",
       "id": "25c2"
+    },
+    {
+      "id": "2ce1",
+      "title": "anor",
+      "description": "aa",
+      "price": "15"
     }
   ]
 }

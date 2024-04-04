@@ -8,6 +8,7 @@ export default function Navbar() {
 
                 <div>
                     <NavLink to="/">Home</NavLink>
+                    <NavLink to="/tabpanel">tabpanel</NavLink>
                 </div>
             </nav>
         </header>

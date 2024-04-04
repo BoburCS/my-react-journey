@@ -6,7 +6,7 @@ function Admin() {
     const [editingProduct, setEditingProduct] = useState(null);
 
     useEffect(() => {
-        useFetchGet("http://localhost:8000/products", (res) => {
+        useFetchGet("http://localhost:6969/products", (res) => {
             res.then(data => setProducts(data));
         })
     }, [products]);
@@ -15,7 +15,7 @@ function Admin() {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(event.target));
         
-        useFetchPost("http://localhost:8000/products", data, (res) => {
+        useFetchPost("http://localhost:6969/products", data, (res) => {
             res.then(newProduct => {
                 setProducts(previousProducts => [...previousProducts, newProduct]);
             })
@@ -31,7 +31,7 @@ function Admin() {
     const handleSave = (event) => {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(event.target));
-        useFetchPut(`http://localhost:8000/products/${editingProduct.id}`, data, (res) => {
+        useFetchPut(`http://localhost:6969/products/${editingProduct.id}`, data, (res) => {
             res.then(() => {
                 setEditingProduct(null);
             });
@@ -43,7 +43,7 @@ function Admin() {
     }
 
     const handleDelete = (id) => {
-        useFetchDelete(`http://localhost:8000/products/${id}`, (res) => {
+        useFetchDelete(`http://localhost:6969/products/${id}`, (res) => {
             res.then(() => {
                 setProducts(previousProducts => previousProducts.filter(product => product.id !== id));
             });

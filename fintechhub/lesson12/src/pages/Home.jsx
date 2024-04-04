@@ -5,7 +5,7 @@ function Home() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        useFetchGet("http://localhost:8000/products", (res) => {
+        useFetchGet("http://localhost:6969/products", (res) => {
             res.then(data => setProducts(data));
         });
     }, []);

@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Context from "./Context/Context";
 import Navbar from "./components/Navbar/Navbar";
 import lazyLoad from "./functions/lazyLoad";
+import ThemePage from "./pages/Theme/ThemePage.jsx";
 
 const Home = lazyLoad("../pages/Home");
 const Weather = lazy(() => wait(1000).then(() => import("./pages/Weather")));
@@ -24,6 +25,8 @@ function App() {
                         <Route path="/photos" element={<Photos />} />
                         <Route path="/video" element={<Video />} />
                         <Route path="/reducer" element={<Reducer />} />
+                        <Route path="/reducer" element={<Reducer />} />
+                        <Route path="/theme" element={<ThemePage />} />
                     </Routes>
                 </Suspense>
             </Context.Provider>
