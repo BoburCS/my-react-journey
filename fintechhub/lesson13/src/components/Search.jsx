@@ -7,7 +7,7 @@ export default function Search() {
             <p className="text-grey text-base font-normal mb-[60px]">
                 На нашем сайте вы найдете подходящие вам <br /> фильмы и сериалы
             </p>
-            <div className="w-full rounded-xl bg-light-dark flex items-center justify-between">
+            <div className="w-full rounded-medium bg-light-dark flex items-center justify-between">
                 <input 
                     name="search" 
                     type="search" 

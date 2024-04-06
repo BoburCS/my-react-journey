@@ -13,6 +13,7 @@ export default {
             },
             borderRadius: {
                 '4xl': '2rem',
+                'medium': '10px',
             },
             colors: {
                 'red': '#EF4234',
