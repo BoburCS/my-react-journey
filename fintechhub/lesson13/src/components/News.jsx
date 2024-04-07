@@ -1,7 +1,9 @@
 import { useState } from "react";
-import MovieCard from "./Cards/MovieCard";
-import Movies from "../data/movies";
-import RightArrow from "../assets/icons/icon-right-sm.svg";
+import MovieCard from "@components/Cards/MovieCard";
+import Button from "@elements/Button";
+
+import Movies from "@data/movies";
+import RightArrow from "@icons/icon-right-sm.svg";
 
 const InitialTabs = [
     { id: "1", title: "Новинки", active: true },
@@ -37,9 +39,9 @@ export default function News() {
                         <MovieCard {...movie} key={movie.id} />
                     ))}
                 </div>
-                <button className="px-5 py-4 rounded-full bg-red">
+                <Button style={"py-4"}>
                     <img src={RightArrow} alt="Button Right Icon" />
-                </button>
+                </Button>
             </div>
         </div>
     );

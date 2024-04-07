@@ -1,4 +1,6 @@
-import Interstellar from "../assets/images/movie-interstellar.png";
+import Button from "@elements/Button";
+
+import Interstellar from "@images/movie-interstellar.png";
 
 const InterstellarGenres = ["Драма", "Фантастика", "Приключения", "16+"];
 
@@ -31,9 +33,9 @@ export default function Movie() {
                     приводят человечество к продовольственному <br /> кризису,
                     коллектив исследователей и учёных...
                 </p>
-                <button className="py-1 px-5 font-medium text-base bg-red self-start rounded-[36px]">
+                <Button style={"self-start"}>
                     Смотреть
-                </button>
+                </Button>
             </div>
         </div>
     );

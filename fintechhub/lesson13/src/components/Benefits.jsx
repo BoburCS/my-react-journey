@@ -1,9 +1,11 @@
-import People from "../assets/icons/icon-people.svg";
-import Quality from "../assets/icons/icon-quality.svg";
-import Offline from "../assets/icons/icon-offline.svg";
-import Lock from "../assets/icons/icon-lock.svg";
-import Film from "../assets/icons/icon-film.svg";
-import Toggle from "../assets/icons/icon-toggle.svg";
+import Button from "@elements/Button";
+
+import People from "@icons/icon-people.svg";
+import Quality from "@icons/icon-quality.svg";
+import Offline from "@icons/icon-offline.svg";
+import Lock from "@icons/icon-lock.svg";
+import Film from "@icons/icon-film.svg";
+import Toggle from "@icons/icon-toggle.svg";
 
 const pros = [
     {id: "10000", image: People, content: "Одна подписка для всей семьи или друзей"},
@@ -42,9 +44,9 @@ export default function Benefits() {
                 </div>
             </div>
 
-            <button className="px-5 py-1 bg-red rounded-4xl font-medium text-base">
+            <Button>
                 Попробовать бесплатно
-            </button>
+            </Button>
         </div>
     );
 }

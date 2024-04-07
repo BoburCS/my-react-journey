@@ -1,5 +1,7 @@
-import Play from "../assets/icons/icon-play.svg";
-import RightArrow from "../assets/icons/icon-right.svg";
+import Button from "@elements/Button";
+
+import Play from "@icons/icon-play.svg";
+import RightArrow from "@icons/icon-right.svg";
 
 const Banners = [
     { id: "1", active: true },
@@ -17,13 +19,13 @@ export default function Banner() {
                 </h3>
                 <h1 className="text-4xl font-semibold mb-4">Джокер</h1>
                 <p className="text-[18px] font-medium mb-7">
-                    Готэм. Комик Артур Флек живет с больной матерью, <br />{" "}
+                    Готэм. Комик Артур Флек живет с больной матерью, <br />
                     которая с детства учит его «ходить с улыбкой»
                 </p>
-                <button className="text-base font-medium px-5 py-[14.5px] bg-red rounded-4xl flex items-center gap-[10px]">
+                <Button style={"font-medium py-[14.5px]"}>
                     Смотреть
                     <img src={Play} alt="Movie Play Icon" />
-                </button>
+                </Button>
             </div>
 
             <div>

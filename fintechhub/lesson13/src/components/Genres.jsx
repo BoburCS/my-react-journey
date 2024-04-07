@@ -1,5 +1,7 @@
-import RightArrow from "../assets/icons/icon-right-sm.svg";
-import GenresObj from "../data/genres";
+import Button from "@elements/Button";
+
+import RightArrow from "@icons/icon-right-sm.svg";
+import GenresObj from "@data/genres";
 
 export default function Genres() {
     return (
@@ -26,9 +28,9 @@ export default function Genres() {
                         </div>
                     ))}
                 </div>
-                <button className="px-5 py-4 rounded-full bg-red">
+                <Button style={"py-4 rounded-full"}>
                     <img src={RightArrow} alt="Button Right Icon" />
-                </button>
+                </Button>
             </div>
         </div>
     );

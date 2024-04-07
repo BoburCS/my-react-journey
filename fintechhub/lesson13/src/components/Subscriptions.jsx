@@ -1,26 +1,5 @@
-const subs = [
-    {
-        id: "110",
-        title: "Easy Illuminous",
-        desc: "Для мобильного приложения. Может смотреть 1 человек",
-        price: " 99 ₽/мес",
-        benefits: ["Нет ограничений", "Никакой рекламы", "10 ТВ каналов"],
-    },
-    {
-        id: "111",
-        title: "Illuminous+",
-        desc: "Для всех устройств. Может смотреть 5 человек",
-        price: " 199 ₽/мес",
-        benefits: ["Нет ограничений", "Никакой рекламы", "25 ТВ каналов"],
-    },
-    {
-        id: "112",
-        title: "Illuminous Gold",
-        desc: "Полный каталог Illuminous без ограничений",
-        price: " 299 ₽/мес",
-        benefits: ["Нет ограничений", "Никакой рекламы", "50 ТВ каналов"],
-    },
-];
+import Button from "@elements/Button";
+import subs from "@data/subscriptions";
 
 export default function Subscriptions() {
     return (
@@ -47,7 +26,7 @@ export default function Subscriptions() {
                                 </li>
                             ))}
                         </ul>
-                        <button className="bg-red self-center px-5 py-3 font-medium text-base rounded-4xl">Попробовать</button>
+                        <Button style={"self-center py-3 font-medium"}>Попробовать</Button>
                     </div>
                 ))}
             </div>

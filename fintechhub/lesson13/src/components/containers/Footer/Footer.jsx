@@ -1,6 +1,8 @@
-import Call from "../assets/icons/icon-call.svg";
-import Mail from "../assets/icons/icon-mail.svg";
-import Telegram from "../assets/icons/icon-telegram.svg";
+import Button from "@elements/Button";
+
+import Call from "@icons/icon-call.svg";
+import Mail from "@icons/icon-mail.svg";
+import Telegram from "@icons/icon-telegram.svg";
 
 const links = ["О нас", "Блог", "Вакансии", "Акции"];
 const contacts = ["Вопросы и ответы", "Список устройств", "Дистрибьютерам", "Контакты",];
@@ -53,9 +55,9 @@ export default function Footer() {
                             </button>
                         ))}
                     </div>
-                    <button className="text-xs font-medium bg-red text-white px-5 py-1 rounded-4xl">
+                    <Button style={"text-xs"}>
                         Написать в чате
-                    </button>
+                    </Button>
                 </div>
             </div>
 

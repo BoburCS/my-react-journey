@@ -1,26 +1,33 @@
-import Logo from "../assets/icons/icon-logo.svg";
-import Profile from "../assets/icons/icon-profile.svg";
+import { NavLink } from "react-router-dom";
 
-const navLinks = ["Главная", "Фильмы", "Сериалы", "Мультфильмы"];
+import Logo from "@icons/icon-logo.svg";
+import Profile from "@icons/icon-profile.svg";
+
+const navLinks = [
+    { title: "Главная", link: "" },
+    { title: "Фильмы", link: "movie" },
+    { title: "Сериалы", link: "tvshows" },
+    { title: "Мультфильмы", link: "cartoons" },
+];
 
 export default function Header() {
     return (
         <header className="px-12 py-8 w-full">
             <nav className="flex items-center justify-between">
                 <div className="flex items-center gap-16">
-                    <a href="">
+                    <NavLink to={"/"}>
                         <img src={Logo} alt="Illiminous Logo" />
-                    </a>
+                    </NavLink>
 
                     <ul className="flex items-start gap-10">
-                        {navLinks.map((link, index) => (
+                        {navLinks.map((navlink, index) => (
                             <li key={index}>
-                                <a
-                                    href=""
+                                <NavLink
+                                    to={`/${navlink.link}`}
                                     className="text-white text-base font-poppins font-normal"
                                 >
-                                    {link}
-                                </a>
+                                    {navlink.title}
+                                </NavLink>
                             </li>
                         ))}
                     </ul>
