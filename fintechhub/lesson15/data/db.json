@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "title": "psot 2 title changed",
+      "content": "psot 2 content",
+      "id": "6c86"
+    }
+  ],
+  "categories": [
+    {
+      "id": "9268",
+      "category": "movie"
+    },
+    {
+      "id": "da6a",
+      "category": "musics"
+    }
+  ],
+  "genres": [
+    {
+      "id": "bd11",
+      "genre": "action"
+    },
+    {
+      "id": "a6e7",
+      "genre": "romance"
+    },
+    {
+      "id": "2c82",
+      "genre": "comedy"
+    }
+  ],
+  "movies": [
+    {
+      "id": "1ca9",
+      "category": "movie",
+      "genre": "action",
+      "name": "Terminator",
+      "image": "https://wallpapers.com/images/hd/the-terminator-movie-ihjt3y63iv9xl8cz.jpg"
+    },
+    {
+      "id": "86e2",
+      "category": "cartoon",
+      "genre": "comedy",
+      "name": "tom and jerry",
+      "image": "https://wallpapers.com/images/hd/tom-and-jerry-4k-opening-title-y9n6dlwvvafe5xx8.jpg"
+    },
+    {
+      "id": "35e0",
+      "category": "movie",
+      "genre": "action",
+      "name": "Avengers",
+      "image": "https://i.pinimg.com/originals/a5/13/79/a513797cc82c47712207d2ad75451467.jpg"
+    }
+  ]
+}

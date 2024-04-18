@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+    @apply border-2 rounded border-black outline-none px-4 py-2;
+}
+
+button {
+    @apply border-2 rounded border-black px-4 py-2;
+}
